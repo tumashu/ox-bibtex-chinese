@@ -32,6 +32,8 @@
 ;; ox-bibtex-chinese is an extension of ox-bibtex, which can help chinese user
 ;; to export bibliography to html.
 
+;; [[./snapshots/ox-bibtex-chinese.gif]]
+
 ;; ** Installation
 ;; ox-bibtex-chinese is now available from the famous emacs package repo
 ;; [[http://melpa.milkbox.net/][melpa]], so the recommended way is to install it
