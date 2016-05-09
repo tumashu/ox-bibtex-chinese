@@ -31,4 +31,5 @@
 国内许多学者将TDABC应用到其他领域来测量产品或者服务成本，比如：应用到制造企业 [[cite:chenzhijun2013][(陈志俊 2013)]]  [[cite:duanlina2013][(段丽娜 2013)]] [[cite:liudan2013][(刘丹 2013)]]，仓储物流领域  [[cite:chenhongxia2007][(陈虹遐 2007)]] [[cite:ningyu2007][(宁宇 2007)]] [[cite:shijing2013][(石靖 2013)]] [[cite:tianhui2012][(田晖 2012)]]  [[cite:wudan2010][(吴丹 2010)]] [[cite:liuna2012][(刘娜 2012)]]  [[cite:kongxianghong2013][(孔祥鸿 2013)]] [[cite:licongcong2013][(李聪聪 2013)]] [[cite:liuhuan2011][(刘欢 2011)]] [[cite:liutong2013][(刘彤 2013)]] [[cite:liuzhongmin2013][(刘忠敏 2013)]]，银行等金融企业 [[cite:fengjunyi2013][(冯君懿 2013)]] [[cite:wanqiuping2012][(万秋萍 2012)]] ，电信企业 [[cite:liuyaqiong2013][(刘亚琼 2013)]]  [[cite:longjunbo2012][(龙俊波 2012)]]以及其他服务行业 [[cite:jinyouliang2013][(金友良 2013)]] [[cite:liyan2013][(李艳 2013)]]。
 
 * 参考文献
+# \bibliography{thesis.bib}
 #+BIBLIOGRAPHY: thesis nil limit:t
