@@ -50,6 +50,7 @@
 ;;; Code:
 ;; * Code                                                                 :code:
 ;; #+BEGIN_SRC emacs-lisp
+(require 'org)
 (require 'ox-bibtex)
 
 (defgroup ox-bibtex-chinese nil
