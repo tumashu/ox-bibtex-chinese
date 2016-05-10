@@ -6,7 +6,7 @@
 ;; Author: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/ox-bibtex-chinese.git
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.4"))
+;; Package-Requires: ((emacs "24.4") (org-plus-contrib "20150504"))
 
 ;; This file is not part of GNU Emacs.
 
