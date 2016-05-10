@@ -88,7 +88,7 @@
            (featurep 'ox-bibtex))
       (progn (advice-add 'org-bibtex-get-style :filter-return #'ox-bibtex-chinese--add-default-style)
              (advice-add 'org-bibtex-get-arguments :filter-return #'ox-bibtex-chinese--add-default-arguments)
-             (message "ox-bibtex is enabled."))
+             (message "ox-bibtex-chinese is enabled."))
     (message "'org' or 'ox-bibtex' is unavailable.")))
 ;; #+END_SRC
 
