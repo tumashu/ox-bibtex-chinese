@@ -6,7 +6,7 @@
 ;; Author: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/ox-bibtex-chinese.git
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.4") (org-plus-contrib "20150504"))
+;; Package-Requires: ((emacs "24.4"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -43,15 +43,16 @@
 ;; 1. Install bibtex2html to your system
 ;; 2. Configure emacs
 ;;    #+BEGIN_EXAMPLE
-;;    (require 'org-bibtex-chinese)
+;;    (require 'org)
+;;    (require 'ox-bibtex)
+;;    (require 'ox-bibtex-chinese)
+;;    (ox-bibtex-chinese-enable)
 ;;    #+END_EXAMPLE
 ;; 3. See the format of "example/thesis.org" and try export it to html file.
 
 ;;; Code:
 ;; * Code                                                                 :code:
 ;; #+BEGIN_SRC emacs-lisp
-(require 'org)
-(require 'ox-bibtex)
 
 (defgroup ox-bibtex-chinese nil
   "Let ox-bibtex work well for Chinese users."
@@ -80,8 +81,15 @@
     (plist-put arguments :options
                (delete-dups (append ox-bibtex-chinese-default-bibtex2html-options orig-options)))))
 
-(advice-add 'org-bibtex-get-style :filter-return #'ox-bibtex-chinese--add-default-style)
-(advice-add 'org-bibtex-get-arguments :filter-return #'ox-bibtex-chinese--add-default-arguments)
+(defun ox-bibtex-chinese-enable ()
+  "Enable ox-bibtex-chinese"
+  (interactive)
+  (if (and (featurep 'org)
+           (featurep 'ox-bibtex))
+      (progn (advice-add 'org-bibtex-get-style :filter-return #'ox-bibtex-chinese--add-default-style)
+             (advice-add 'org-bibtex-get-arguments :filter-return #'ox-bibtex-chinese--add-default-arguments)
+             (message "ox-bibtex is enabled."))
+    (message "'org' or 'ox-bibtex' is unavailable.")))
 ;; #+END_SRC
 
 ;; * Footer
