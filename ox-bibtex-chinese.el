@@ -52,8 +52,6 @@
 
 ;;; Code:
 ;; * Code                                                                 :code:
-;; #+BEGIN_SRC emacs-lisp
-
 (defgroup ox-bibtex-chinese nil
   "Let ox-bibtex work well for Chinese users."
   :group 'ox-bibtex)
@@ -89,10 +87,8 @@
              (advice-add 'org-bibtex-get-arguments :filter-return #'ox-bibtex-chinese--add-default-arguments)
              (message "ox-bibtex-chinese is enabled."))
     (message "'org' or 'ox-bibtex' is unavailable.")))
-;; #+END_SRC
 
 ;; * Footer
-;; #+BEGIN_SRC emacs-lisp
 (provide 'ox-bibtex-chinese)
 
 ;; Local Variables:
@@ -100,4 +96,3 @@
 ;; End:
 
 ;;; ox-bibtex-chinese.el ends here
-;; #+END_SRC
