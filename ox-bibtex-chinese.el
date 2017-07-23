@@ -35,13 +35,13 @@
 ;; [[./snapshots/ox-bibtex-chinese.gif]]
 
 ;; ** Installation
-;; ox-bibtex-chinese is now available from the famous emacs package repo
+;; ox-bibtex-chinese is now available from the famous Emacs package repo
 ;; [[http://melpa.milkbox.net/][melpa]], so the recommended way is to install it
-;; through emacs package management system.
+;; through Emacs package management system.
 
 ;; ** Usage
 ;; 1. Install bibtex2html to your system
-;; 2. Configure emacs
+;; 2. Configure Emacs
 ;;    #+BEGIN_EXAMPLE
 ;;    (require 'org)
 ;;    (require 'ox-bibtex)
@@ -69,20 +69,21 @@
   "Set bibtex2html default options, when use ox-bibtex.")
 
 (defun ox-bibtex-chinese--add-default-style (style)
-  "If `org-bibtex-get-style' is not return a valid style, return
-`ox-bibtex-chinese-default-bibtex-style'"
+  "Return default STYLE.
+If `org-bibtex-get-style' is not return a valid style,
+return `ox-bibtex-chinese-default-bibtex-style'"
   (if (org-not-nil style)
       style
     ox-bibtex-chinese-default-bibtex-style))
 
 (defun ox-bibtex-chinese--add-default-arguments (arguments)
-  "Add extra arguments to `org-bibtex-get-arguments, then returned"
+  "Add ARGUMENTS to `org-bibtex-get-arguments, then returned."
   (let ((orig-options (plist-get arguments :options)))
     (plist-put arguments :options
                (delete-dups (append ox-bibtex-chinese-default-bibtex2html-options orig-options)))))
 
 (defun ox-bibtex-chinese-enable ()
-  "Enable ox-bibtex-chinese"
+  "Enable ox-bibtex-chinese."
   (interactive)
   (if (and (featurep 'org)
            (featurep 'ox-bibtex))
