@@ -69,9 +69,7 @@
   "Set bibtex2html default options, when use ox-bibtex.")
 
 (defun ox-bibtex-chinese--add-default-style (style)
-  "Return default STYLE.
-If `org-bibtex-get-style' is not return a valid style,
-return `ox-bibtex-chinese-default-bibtex-style'"
+  "Return `ox-bibtex-chinese-default-bibtex-style', if STYLE is a invaild style."
   (if (org-not-nil style)
       style
     ox-bibtex-chinese-default-bibtex-style))
